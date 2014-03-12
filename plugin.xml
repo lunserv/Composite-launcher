@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension point="org.eclipse.debug.core.launchConfigurationTypes">
+        <launchConfigurationType
+            id="com.lunserv.compolaunch.CompositeLaunch"
+            delegate="com.lunserv.compolaunch.LaunchConfigurationDelegate"
+            modes="run,debug"
+            name="Composite launch">
+        </launchConfigurationType>
+    </extension>
+    <extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+        <launchConfigurationTabGroup
+            type="com.lunserv.compolaunch.CompositeLaunch"
+            class="com.lunserv.compolaunch.CompositeLaunchTabGroup"
+            id="com.lunserv.compolaunch.CompositeLaunchTabGroup.CompositeLaunch">
+        </launchConfigurationTabGroup>
+    </extension>
+    <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+        <launchConfigurationTypeImage
+            icon="icons/cl.png"
+            configTypeID="com.lunserv.compolaunch.CompositeLaunch"
+            id="com.lunserv.compolaunch.launchConfigurationTypeImage.CompositeLaunch">
+        </launchConfigurationTypeImage>
+    </extension>
+</plugin>
